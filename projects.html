@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Robotics Club NIT Patna</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="projects_style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <nav class="navbar">
+            <div class="brand">
+                <span class="uni-text">National Institute of Technology, Patna</span>
+                <span class="club-text">Robotics Club</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="page-header">
+            <h1 class="glitch-text">INNOVATION LAB</h1>
+            <p class="tagline">BUILDING THE FUTURE, ONE BOT AT A TIME</p>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterProjects('all')">All Units</button>
+                <button class="filter-btn" onclick="filterProjects('drone')">Drones</button>
+                <button class="filter-btn" onclick="filterProjects('ai')">AI / ML</button>
+                <button class="filter-btn" onclick="filterProjects('iot')">IoT & Embedded</button>
+                <button class="filter-btn" onclick="filterProjects('robotics')">Robotics</button>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="projects-grid" id="projectsGrid">
+                
+                <div class="project-card" data-category="drone">
+                    <div class="project-img-container">
+                        <div class="project-img" style="background-image: url(drocto.jpg);"></div>
+                        <span class="year-badge">2025</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dr. Octo</h3>
+                        <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque iure nisi nobis earum quisquam ipsa.</p>
+                        <div class="tech-stack">
+                            <span>Pixhawk</span><span>Python</span><span>OpenCV</span>
+                        </div>
+                        <div class="team-info">
+                            <span class="lead">Lead: Aarav S.</span>
+                            <span class="members">Team of 4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai">
+                    <div class="project-img-container">
+                        <div class="project-img" style="background-image: url(grandmaster.jpg);"></div>
+                        <span class="year-badge">2024</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Grandmaster AI</h3>
+                        <p class="desc">Vision-based chess playing robot arm that analyzes the board state via camera and executes moves physically.</p>
+                        <div class="tech-stack">
+                            <span>TensorFlow</span><span>RPi 4</span><span>Servo</span>
+                        </div>
+                        <div class="team-info">
+                            <span class="lead">Lead: Priya M.</span>
+                            <span class="members">Team of 3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="iot">
+                    <div class="project-img-container">
+                        <div class="project-img" style="background-image: url(nitp.jpg);"></div>
+                        <span class="year-badge">2025</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Campus Grid</h3>
+                        <p class="desc">LoRaWAN sensor network monitoring air quality and energy usage across the NIT Patna campus.</p>
+                        <div class="tech-stack">
+                            <span>ESP32</span><span>LoRa</span><span>AWS</span>
+                        </div>
+                        <div class="team-info">
+                            <span class="lead">Lead: Rahul K.</span>
+                            <span class="members">Team of 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="robotics">
+                    <div class="project-img-container">
+                        <div class="project-img" style="background-image: url(tars.jpg);"></div>
+                        <span class="year-badge">2023</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Agri-Rover</h3>
+                        <p class="desc">A rough-terrain rover that patrols a field, stops at plants, takes a close-up photo, and uploads it to your existing website to detect diseases.</p>
+                        <div class="tech-stack">
+                            <span>Arduino</span><span>SolidWorks</span><span>ZigBee</span>
+                        </div>
+                        <div class="team-info">
+                            <span class="lead">Lead: S. Gupta</span>
+                            <span class="members">Team of 6</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="project-card" data-category="iot">
+                    <div class="project-img-container">
+                        <div class="project-img" style="background-image: url(photograph.jpg);"></div>
+                        <span class="year-badge">2023</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>The "Polaroid" Photographer Bot</h3>
+                        <p class="desc">A desktop robot that tracks a human face. When you smile (detected via AI), it automatically snaps a picture and either prints it (via a thermal printer module) or uploads it to a "Digital Gallery" webpage.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>NodeMCU</span><span>Relay</span>
+                        </div>
+                        <div class="team-info">
+                            <span class="lead">Lead: John D.</span>
+                            <span class="members">Team of 3</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Robotics Club, NIT Patna. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Toggle Active Button
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'All Units')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Toggle Cards
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => card.style.opacity = '1', 50);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
