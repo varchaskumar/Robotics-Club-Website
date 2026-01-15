@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | Robotics Club NIT Patna</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="achievements_styles.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <nav class="navbar">
+            <div class="brand">
+                <span class="uni-text">National Institute of Technology, Patna</span>
+                <span class="club-text">Robotics Club</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="achievements.html" class="active">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="page-header">
+            <h1 class="glitch-text">HALL OF FAME</h1>
+            <p class="tagline">CELEBRATING EXCELLENCE & INNOVATION</p>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-box">
+                    <i class="fas fa-trophy"></i>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>National Wins</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-scroll"></i>
+                    <h3 class="counter" data-target="8">0</h3>
+                    <p>Research Papers</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-hand-holding-dollar"></i>
+                    <h3 class="counter" data-target="5">0</h3>
+                    <p>Lakhs in Grants</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-award"></i>
+                    <h3 class="counter" data-target="25">0</h3>
+                    <p>Awards Total</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="achieve-section">
+            <h2 class="section-title">Competition Victories</h2>
+            <div class="achieve-grid">
+                
+                <div class="achieve-card">
+                    <div class="achieve-img-container">
+                        <div class="achieve-img" style="background-image: url(sih.jpg);"></div>
+                        <div class="rank-badge"><i class="fas fa-crown"></i> 1st Place</div>
+                    </div>
+                    <div class="achieve-content">
+                        <h3>Smart India Hackathon 2025</h3>
+                        <p class="award-details"><strong>Prize:</strong> ₹1,00,000</p>
+                        <p class="team-members"><strong>Team:</strong> Circuit Breakers (Lead: Aarav P.)</p>
+                        <p class="desc">Developed an autonomous disaster relief drone system capable of identifying survivors using thermal imaging.</p>
+                    </div>
+                </div>
+
+                <div class="achieve-card">
+                    <div class="achieve-img-container">
+                        <div class="achieve-img" style="background-image: url(rw.jpg);"></div>
+                        <div class="rank-badge runner-up"><i class="fas fa-medal"></i> 2nd Place</div>
+                    </div>
+                    <div class="achieve-content">
+                        <h3>Inter-NIT RoboWar 2024</h3>
+                        <p class="award-details"><strong>Prize:</strong> ₹50,000</p>
+                        <p class="team-members"><strong>Team:</strong> Iron Giants</p>
+                        <p class="desc">Our 60kg combat robot "Destroyer" secured the runner-up position after 5 consecutive knockout wins.</p>
+                    </div>
+                </div>
+
+                <div class="achieve-card">
+                    <div class="achieve-img-container">
+                        <div class="achieve-img" style="background-image: url(robocom.jpg);"></div>
+                        <div class="rank-badge"><i class="fas fa-award"></i> Best Innovation</div>
+                    </div>
+                    <div class="achieve-content">
+                        <h3>e-Yantra Robotics Competition</h3>
+                        <p class="award-details"><strong>Prize:</strong> Internship @ IITB</p>
+                        <p class="team-members"><strong>Team:</strong> Bot-X</p>
+                        <p class="desc">Awarded for the most unique implementation of path-planning algorithms in a warehouse management bot.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-section">
+            <h2 class="section-title">Research Publications</h2>
+            <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="paper-info">
+                        <h3>Swarm Intelligence in UAVs for Agriculture</h3>
+                        <p class="journal">IEEE International Conference on Robotics (ICRA) 2025</p>
+                        <p class="authors">Authors: S. Roy, A. Patel, Dr. S.K. Singh</p>
+                        <a href="#" class="paper-link">Read Abstract <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="paper-info">
+                        <h3>Low-Cost Prosthetic Arm using EMG Signals</h3>
+                        <p class="journal">Journal of Intelligent Systems, Vol 12, 2024</p>
+                        <p class="authors">Authors: R. Das, P. Mehra</p>
+                        <a href="#" class="paper-link">Read Abstract <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grants-section">
+            <h2 class="section-title">Grants & Recognition</h2>
+            <div class="grant-grid">
+                <div class="grant-box">
+                    <h3>Innovation Grant</h3>
+                    <p class="grant-org">Department of Science & Technology (DST)</p>
+                    <p class="amount">₹3.5 Lakhs</p>
+                    <p class="year">2024</p>
+                </div>
+                <div class="grant-box">
+                    <h3>Startup Seed Fund</h3>
+                    <p class="grant-org">NIT Patna Incubation Center</p>
+                    <p class="amount">₹2.0 Lakhs</p>
+                    <p class="year">2025</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Robotics Club, NIT Patna. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Trigger animation when stats section is in view
+        let options = { threshold: 0.5 };
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        document.querySelectorAll('.stats-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
