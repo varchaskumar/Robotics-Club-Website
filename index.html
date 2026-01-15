@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Robotics Club NIT Patna</title>
+    <meta name="description" content="Official website of the Robotics Club, National Institute of Technology, Patna. Code for Future Robotics.">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="logoicon"><img src="logo.jpg" alt=""></div>
+                <div class="titleside">
+                    <div class="uni-name">National Institute of Technology, Patna</div>
+                    <div class="club-name">Robotics Club</div>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburgerBtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>ROBOTICS CLUB</h1>
+                <h1>NIT PATNA</h1>
+                <!--<p class="tagline">Code for Future Robotics</p>-->
+            </div>
+
+            <div class="nav-grid">
+                <a href="about.html" class="glass-card">
+                    <div class="icon-glow">ℹ️</div>
+                    <h3>About</h3>
+                </a>
+                <a href="projects.html" class="glass-card">
+                    <div class="icon-glow">📂</div>
+                    <h3>Projects</h3>
+                </a>
+                <a href="events.html" class="glass-card">
+                    <div class="icon-glow">📅</div>
+                    <h3>Events</h3>
+                </a>
+                <a href="team.html" class="glass-card">
+                    <div class="icon-glow">👥</div>
+                    <h3>Team</h3>
+                </a>
+                <a href="news.html" class="glass-card">
+                    <div class="icon-glow">📰</div>
+                    <h3>News</h3>
+                </a>
+                <a href="achievements.html" class="glass-card">
+                    <div class="icon-glow">🏆</div>
+                    <h3>Achievements</h3>
+                </a>
+                 <a href="#" class="glass-card">
+                    <div class="icon-glow">📝</div>
+                    <h3>Club</h3>
+                </a>
+                <a href="contact.html" class="glass-card">
+                    <div class="icon-glow">📞</div>
+                    <h3>Contact</h3>
+                </a>
+            </div>
+        </section>
+
+        <section id="events" class="content-section">
+    <div class="container">
+        <h2 class="section-title" data-text="UPCOMING MISSIONS">Latest Events</h2>
+        <!--
+        <div class="filter-bar">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Workshops</button>
+            <button class="filter-btn">Competitions</button>
+        </div>
+    -->
+
+        <div class="event-grid">
+            <div class="event-card glass">
+                <div class="event-badge">Workshop</div>
+                <div class="event-img"> 
+                    <img src="drone.webp" alt="">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">Jan 28, 2026 | 10:00 AM</span>
+                    <h3>Drone Port 1.0</h3>
+                    <p>Hands-on workshop on autonomous drone navigation and landing protocols.</p>
+                    <button class="register-btn">Register Interest</button>
+                </div>
+            </div>
+
+            <div class="event-card glass">
+                <div class="event-badge">Competition</div>
+                <div class="event-img">
+                    <img src="robosoccer.jpg" alt="">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">Feb 05, 2026 | 09:00 AM</span>
+                    <h3>Robo-Soccer League</h3>
+                    <p>Battle it out in the arena with your custom-built high-speed soccer bots.</p>
+                    <button class="register-btn">Register Interest</button>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+
+<section id="achievements" class="content-section alternate-bg">
+    <div class="container">
+        <h2 class="section-title" data-text="HALL OF FAME">Club Achievements</h2>
+        
+        <div class="stats-container">
+            <div class="stat-item glass">
+                <h3 class="stat-number" data-target="25">0</h3>
+                <p>Major Projects</p>
+            </div>
+            <div class="stat-item glass">
+                <h3 class="stat-number" data-target="12">0</h3>
+                <p>National Wins</p>
+            </div>
+            <div class="stat-item glass">
+                <h3 class="stat-number" data-target="5">0</h3>
+                <p>Research Papers</p>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item left glass">
+                <div class="time-content">
+                    <span class="year">2025</span>
+                    <h4>First Prize - Inter-NIT Robotics</h4>
+                    <p>Secured top position in the 'Autonomous Maze Solver' category.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item left glass">
+                <div class="time-content">
+                    <span class="year">2024</span>
+                    <h4>Second Prize - ISRO Drone Challenge</h4>
+                    <p>Secured top second position in the 'Autonomous Drone Competition'</p>
+                </div>
+            </div>
+            <div class="timeline-item left glass">
+                <div class="time-content">
+                    <span class="year">2025</span>
+                    <h4>First Prize - Inter-NIT Tech</h4>
+                    <p>Secured top position in the National Tech Competitions.</p>
+                </div>
+            </div>
+    </div>
+</section>
+    
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>NITP Robotics</h2>
+            </div>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+            <div class="quick-contact">
+                 <p>roboticsclub@nitp.ac.in</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Robotics Club, NIT Patna. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Robotics Club NIT Patna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about_styles.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <nav class="navbar">
+            <div class="brand">
+                <span class="uni-text">National Institute of Technology, Patna</span>
+                <span class="club-text">Robotics Club</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="page-header">
+            <h1 class="glitch-text">ABOUT THE CLUB</h1>
+            <p class="tagline">INNOVATING SINCE 2018</p>
+        </section>
+
+        <section class="mission-section">
+            <div class="mission-grid">
+                <div class="cyber-card">
+                    <div class="cyber-icon">🚀</div>
+                    <h3>Our Mission</h3>
+                    <p>To foster a community of innovators who solve real-world problems through robotics and automation technology.</p>
+                </div>
+                <div class="cyber-card">
+                    <div class="cyber-icon">👁️</div>
+                    <h3>Our Vision</h3>
+                    <p>To become a leading hub for robotics research and development in Eastern India, producing industry-ready engineers.</p>
+                </div>
+                <div class="cyber-card">
+                    <div class="cyber-icon">🎯</div>
+                    <h3>Objectives</h3>
+                    <p>Promote hands-on learning, participate in national competitions, and facilitate peer-to-peer knowledge transfer.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section glass-section">
+            <h2 class="section-title">The Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content glass">
+                        <span class="year">2018</span>
+                        <h3>Inception</h3>
+                        <p>Robotics Club NIT Patna was officially established by a group of 10 enthusiasts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content glass">
+                        <span class="year">2020</span>
+                        <h3>First Major Win</h3>
+                        <p>Secured 1st rank in Smart India Hackathon (Hardware Edition).</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content glass">
+                        <span class="year">2023</span>
+                        <h3>Lab Expansion</h3>
+                        <p>Inaugurated the advanced IoT and Drone testing facility.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content glass">
+                        <span class="year">2025</span>
+                        <h3>National Recognition</h3>
+                        <p>Hosted the largest Inter-NIT Robotics Championship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="infra-section">
+            <h2 class="section-title">Focus Areas & Labs</h2>
+            <div class="infra-grid">
+                <div class="infra-card glass">
+                    <div class="infra-img" style="background-image: url(drone.jpg);"></div>
+                    <h3>Autonomous Drones</h3>
+                    <p>Specialized lab for UAV testing and flight controller programming.</p>
+                </div>
+                <div class="infra-card glass">
+                    <div class="infra-img" style="background-image: url(jarvis.jpg);" ></div>
+                    <h3>IoT & Embedded</h3>
+                    <p>Equipped with ESP32, Raspberry Pi clusters, and sensor arrays.</p>
+                </div>
+                <div class="infra-card glass">
+                    <div class="infra-img" style="background-image: url(ml.jpg);"></div>
+                    <h3>Machine Learning</h3>
+                    <p>High-performance computing units for training AI models.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Robotics Club, NIT Patna. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
