@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Robotics Club NIT Patna</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="news_styles.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <nav class="navbar">
+            <div class="brand">
+                <span class="uni-text">National Institute of Technology, Patna</span>
+                <span class="club-text">Robotics Club</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="page-header">
+            <h1 class="glitch-text">TECH CHRONICLES</h1>
+            <p class="tagline">LATEST UPDATES FROM THE LAB & BEYOND</p>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterNews('all')">All Feeds</button>
+                <button class="filter-btn" onclick="filterNews('club')">Club News</button>
+                <button class="filter-btn" onclick="filterNews('industry')">Tech Innovations</button>
+                <button class="filter-btn" onclick="filterNews('research')">Research</button>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="news-grid" id="newsGrid">
+                
+                <div class="news-card" data-category="industry">
+                    <div class="news-img-container">
+                        <div class="news-img" style="background: linear-gradient(45deg, #000, #00d2ff);"></div>
+                        <span class="news-cat">Innovation</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date"><i class="far fa-calendar-alt"></i> Jan 10, 2026</span>
+                            <span class="source"><i class="fas fa-link"></i> TechCrunch</span>
+                        </div>
+                        <h3>Boston Dynamics' New Atlas</h3>
+                        <p class="summary">The latest iteration of the Atlas robot demonstrates 360-degree joint rotation and enhanced agility, marking a significant leap in humanoid robotics capability for industrial applications.</p>
+                        <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="club">
+                    <div class="news-img-container">
+                        <div class="news-img" style="background: linear-gradient(45deg, #000, #9d00ff);"></div>
+                        <span class="news-cat">Club Update</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date"><i class="far fa-calendar-alt"></i> Jan 05, 2026</span>
+                            <span class="source"><i class="fas fa-user"></i> Secretary</span>
+                        </div>
+                        <h3>Winter Camp Success</h3>
+                        <p class="summary">Our annual Winter Robotics Camp concluded yesterday with over 150 participants. The winning team "Circuit Breakers" built a fully functional line-following bot in just 3 days.</p>
+                        <a href="#" class="read-more">View Gallery <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="research">
+                    <div class="news-img-container">
+                        <div class="news-img" style="background: linear-gradient(45deg, #000, #ff0055);"></div>
+                        <span class="news-cat">Research</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date"><i class="far fa-calendar-alt"></i> Dec 28, 2025</span>
+                            <span class="source"><i class="fas fa-university"></i> MIT News</span>
+                        </div>
+                        <h3>Soft Robotics Breakthrough</h3>
+                        <p class="summary">Researchers have developed a new "self-healing" synthetic muscle for soft robots that allows them to recover from physical damage instantly without external intervention.</p>
+                        <a href="#" class="read-more">Read Paper <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="club">
+                    <div class="news-img-container">
+                        <div class="news-img" style="background: linear-gradient(45deg, #000, #ffaa00);"></div>
+                        <span class="news-cat">Announcement</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date"><i class="far fa-calendar-alt"></i> Dec 20, 2025</span>
+                            <span class="source"><i class="fas fa-bullhorn"></i> Admin</span>
+                        </div>
+                        <h3>New Lab Equipment Arrived</h3>
+                        <p class="summary">The club has successfully procured 5 new Bambu Lab 3D printers and a high-precision PCB milling machine. Training sessions for members will begin next week.</p>
+                        <a href="#" class="read-more">Check Schedule <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="industry">
+                    <div class="news-img-container">
+                        <div class="news-img" style="background: linear-gradient(45deg, #000, #00ff88);"></div>
+                        <span class="news-cat">AI & Tech</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date"><i class="far fa-calendar-alt"></i> Dec 15, 2025</span>
+                            <span class="source"><i class="fas fa-robot"></i> IEEE Spectrum</span>
+                        </div>
+                        <h3>GPT-5 Integrated Drones</h3>
+                        <p class="summary">A startup has successfully integrated the latest GPT-5 multimodal model into drone flight controllers, allowing for complex voice-commanded autonomous missions.</p>
+                        <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="newsletter-box">
+                <div class="newsletter-content">
+                    <i class="fas fa-paper-plane glow-icon"></i>
+                    <h2>Stay in the Loop</h2>
+                    <p>Get the latest club updates and industry news delivered to your inbox.</p>
+                </div>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Robotics Club, NIT Patna. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function filterNews(category) {
+            const cards = document.querySelectorAll('.news-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Toggle Active Button
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'All Feeds')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Toggle Cards
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex'; // Flex to keep layout
+                    setTimeout(() => card.style.opacity = '1', 50);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

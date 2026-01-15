@@ -1,0 +1,307 @@
+/* =========================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================= */
+:root {
+    --bg-color: #020617;       /* Deep Navy */
+    --neon-blue: #00d2ff;      /* Cyan */
+    --neon-purple: #9d00ff;    /* Purple Accent */
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Background Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -1;
+}
+
+/* =========================================
+   2. NAVIGATION BAR
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand { display: flex; flex-direction: column; }
+.uni-text { font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 1px; text-transform: uppercase; }
+.club-text { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: white; }
+
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--neon-blue); text-shadow: 0 0 10px rgba(0, 210, 255, 0.5); }
+
+/* Mobile Menu Toggle */
+.menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.menu-toggle span { width: 25px; height: 3px; background: var(--neon-blue); }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; } 
+    .menu-toggle { display: flex; }
+}
+
+/* =========================================
+   3. PAGE HEADER
+   ========================================= */
+.content-wrapper { padding-top: 100px; }
+
+.page-header {
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.glitch-text {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--neon-blue);
+    text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.tagline { letter-spacing: 4px; color: white; text-transform: uppercase; }
+.section-title { font-family: var(--font-heading); color: white; font-size: 2rem; margin-bottom: 2rem; text-align: center; }
+
+
+/* =========================================
+   4. TEAM PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* FACULTY SECTION */
+.faculty-section {
+    padding: 0 5% 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faculty-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--neon-blue);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    gap: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.1);
+}
+
+.faculty-img-container {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--neon-blue);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.faculty-img { width: 100%; height: 100%; background-size: cover; }
+
+.faculty-info h3 {
+    font-family: var(--font-heading);
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.designation {
+    color: var(--neon-purple);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.quote-box {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid var(--text-muted);
+}
+
+.quote-box i {
+    position: absolute;
+    left: 5px; top: -5px;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 1.5rem;
+}
+
+.quote-box p { color: var(--text-muted); font-style: italic; font-size: 1.1rem; }
+
+/* CORE TEAM GRID */
+.core-team-section { padding: 0 5% 5rem; }
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.team-card {
+    position: relative;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.member-img {
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+}
+
+.member-info {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.member-info h3 { font-family: var(--font-heading); color: white; margin-bottom: 5px; }
+.member-info .role { color: var(--neon-blue); font-size: 0.9rem; font-weight: 600; }
+
+/* Hover Overlay Effect */
+.member-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(2, 6, 23, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+    z-index: 2;
+}
+
+.team-card:hover .member-overlay { opacity: 1; transform: translateY(0); }
+.member-overlay p { color: white; font-style: italic; margin-bottom: 20px; }
+
+.social-links-team { display: flex; gap: 20px; }
+.social-links-team a { color: var(--neon-blue); font-size: 1.5rem; transition: 0.3s; }
+.social-links-team a:hover { color: white; transform: scale(1.2); }
+
+/* DOMAIN SECTIONS */
+.domain-section { padding: 0 5% 5rem; }
+
+.domain-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.domain-group {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.domain-group:hover { border-color: var(--neon-purple); transform: translateY(-5px); }
+
+.domain-title {
+    font-family: var(--font-heading);
+    color: white;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.domain-title i { color: var(--neon-purple); }
+
+.member-list { list-style: none; }
+.member-list li {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.member-list li span {
+    color: var(--neon-blue);
+    font-size: 0.8rem;
+    background: rgba(0, 210, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* ALUMNI TICKER */
+.alumni-section { padding: 0 5% 5rem; text-align: center; }
+
+.alumni-ticker {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    border: 1px solid var(--border);
+}
+
+.alumni-item { color: var(--text-muted); font-size: 0.9rem; }
+.alumni-item strong { color: var(--neon-blue); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .faculty-card { flex-direction: column; text-align: center; gap: 20px; }
+    .quote-box { border-left: none; border-top: 3px solid var(--text-muted); padding-left: 0; padding-top: 20px; }
+    .quote-box i { left: 50%; transform: translateX(-50%); top: -15px; }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    background: rgba(2,6,23,0.95);
+    color: var(--text-muted);
+}
