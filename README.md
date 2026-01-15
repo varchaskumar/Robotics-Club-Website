@@ -7,7 +7,7 @@ This repository contains the source code for the official website of the **Robot
 
 The design follows a **"Cyber-Robotics" aesthetic**, utilizing Glassmorphism, Neon Glow effects, and a 3D particle background to reflect the innovative nature of the club.
 
-**🔗 Live Demo:** 
+**🔗 Live Demo:**  https://varchaskumar.github.io/Robotics-Club-Website/
 
 ---
 
